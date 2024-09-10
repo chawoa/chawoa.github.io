@@ -21,7 +21,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Noru0817 # the main title
+title: chawoa # the main title
 
 tagline: 공부한 내용 올리는 블로그 # it will display as the sub-title
 
@@ -29,10 +29,10 @@ description: >- # used by seo meta and the atom feed
   Kubernetes, 컴퓨터구조, 운영체제, 데이터베이스
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://Noru0817.github.io"
+url: "https://chawoa.github.io"
 
 github:
-  username: Noru0817 # change to your github username
+  username: chawoa # change to your github username
 
 twitter:
   username: twitter_username # change to your twitter username
@@ -40,8 +40,8 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 노루
-  email: wontak6226@gmail.com # change to your email address
+  name: chawoa
+  email: choiwooin0312@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     #- https://twitter.com/username      # change to your twitter homepage
@@ -198,3 +198,4 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
