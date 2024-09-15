@@ -20,6 +20,7 @@ mermaid: true
 
    - ### **Internet에 대하여**   
       'Internet'과 'internet'의 차이는 'Internet'의 경우 WWW와 같이 연결되어있는 모든 네트워크를 뜻한다. 그에 반해 'internet'은 로컬 네트워크와 같은 작은 규모의 네트워크를 뜻한다.  
+         
       네트워크에는 수십만개의 컴퓨팅 기기가 연결되어 있다. 각 단말기기를 우리는 hosts, end systems, consumer 라고 칭한다. 그러나 이런 기기들은 때에 따라 다를 수 있다. 예를 들어 지역 ISP가 국제 ISP로 부터 네트워크를 연결할 경우 지역 ISP는 Hosts이지만, 지역 ISP가 다른 기기에게 네트워크를 제공할 때는 Provider가 된다. 우리가 네트워크를 사용하는 모든 앱은 모두 edge에서 이루어진다는 것이다.   
       **네트워크 종류**   
       - Mobile network   
