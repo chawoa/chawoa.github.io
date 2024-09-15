@@ -61,8 +61,9 @@ mermaid: true
       - *Access network* : Network core로부터 네트워크 서비스를 받는 네트워크이다. (EX | BS, Access Point 등)   
          - Cable-based access   
             - FDM (Frequency division multiplexing)   
-               각 대역폭을 구분하여 전송하는 방법이다. 
+               각 대역폭을 구분하여 전송하는 방법이다. 시간에 관계없이 대역폭을 각자 나누어 사용이 가능하다.   
             - TDM (Time division multiplexing)   
+               시간을 나누어 모든 대역폭을 사용한다. 모든 대역폭을 사용하지만 일시적으로만 사용이 가능하다.   
          - DSL (digital subscriber line)   
             기존의 집전화를 생각하면 편할 것이다. ...   
          - home network   
@@ -81,11 +82,13 @@ mermaid: true
          
       - *Network core* : 각 edge 유저에게 제공하는 서비스가 아닌 통신에만 연결된 경우이다. 즉, 네트워크들의 네트워크이다. (EX | local ISP, global ISP와 같은 것이다.) 해당 네트워크의 주 기능은 Forwarding, Routing 두 가지 이다.   
          - Forwarding : switching으로 부르기도하며, 로컬 영역에서 라우터로 들어온 입력 링크를 적절한 출력 링크로 변경해주는 과정이다.
-         - Routing : 출발지에서 목적지까지의 경로를 결정하는 과정으로 적절히 전달하기 위한 라우팅 테이블이 작성된다. 또한, 라우팅 알고리즘을 통해 포워딩 테이블을 만든다.
-         - packet-switching   
-         - circuit-switching   
-
-      - *
+         - Routing : 출발지에서 목적지까지의 경로를 결정하는 과정으로 적절히 전달하기 위해 라우팅 알고리즘을 통해 라우팅 테이블이 작성된다.
+         - packet-switching (shared=공유된)   
+            패킷은 전달되기 전에 반드시 라우터에 도착하여야한다. 리소스를 평등하게 사용한다는 장점이 있다.   
+            Queueing은 링크가 감당하기 어려운 속도로 도착하게 되면 진행되는 대기 방식이다. 만약 라우터의 버퍼보다 더 많은 값이 대기하게 되면 패킷의 손실이 일어난다.   
+         - circuit-switching (dedicated=지정된)   
+            보장된 회선이 있기 때문에 개인 서비스는 더 빠르게 사용이 가능하다. 과거의 전화 통신이 이렇게 이루어졌다.   
+         보통 네트워크를 사용하는 유저가 모든 시간동안 네트워크를 사용하지 않기 때문에 회선 교환을 사용할 경우 리소스의 낭비가 심하다. 그러나 패킷 교환의 경우 공유된 리소스는 나눠쓰기 때문에 더 많은 유저들이 링크를 통해 네트워크를 사용할 수 있다.   
 
    *추가 상식 : CPU 코어의 3.41GHz와 같이 표시된 사양은 초당 3.41 x 10의6승 개의 instruction을 처리할 수 있다는 뜻이다.*   
                *패킷 통신 과정에서 upstream은 upload, downstream은 download를 뜻한다.*   
