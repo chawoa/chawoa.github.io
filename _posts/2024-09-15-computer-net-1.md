@@ -8,7 +8,7 @@ mermaid: true
 
 # 컴퓨터 네트워크 1 (Computer Networking)   
 
-- ## **1징**   
+- ## **1장**   
    - ### **개요**   
       - *'Internet'이란 무엇인가?*   
       - *Network edge*   
@@ -35,15 +35,15 @@ mermaid: true
       
       - TCP / UDP의 차이 : 보안적인 측면으로 봤을 때 차이가 있다. TCP의 경우 연결을 위해 요청이 오고 가지만, UDP의 경우 해당 과정을 생략한다.   
       - 추가 정보   
-         - Homogeneous Network : 모든 연결이 하나로만 이루어진 네트워크이다. (EX | WiFi로만, Ethernet으로만 등)   
-         - Hedregeneous Network : 연결 종류가 2개 이상으로 이루어진 네트워크이다. (EX | 몇은 WiFi, 몇은 Ethernet 등)   
+         Homogeneous Network : 모든 연결이 하나로만 이루어진 네트워크이다. (EX WiFi로만, Ethernet으로만 등)   
+         Hedregeneous Network : 연결 종류가 2개 이상으로 이루어진 네트워크이다. (EX 몇은 WiFi, 몇은 Ethernet 등)   
 
    - ### **표준**   
       ...   
 
    - ### **서비스 측면에서의 Internet**   
-      - Infrastructure : 서비스를 앱에 제공하는 것 (EX | Web, email, games 등)   
-      - programming interface : 앱에 기여하는 모든 것 (EX | API)   
+      Infrastructure : 서비스를 앱에 제공하는 것 (EX Web, email, games 등)   
+      programming interface : 앱에 기여하는 모든 것 (EX API)   
 
 
    - ### **간단한 셀룰러 네트워크의 원리**   
@@ -58,7 +58,7 @@ mermaid: true
             - TP (Twisted pair) : 보통 알고있는 랜케이블이 예시이다.   
             - Coaxial cable (동축 케이블) : 양방향 통신(bidirectional)을 하고? ...   
             - Fiber optic cable (광케이블) : 가장 빠른 전송률을 가지고 있으며, 빛 반사를 사용한 통신을 하기 때문에 빛 흡수가 나타나지 않으면 감쇄가 잘 일어나지 않는다. 따라서 전송 중간에 증폭기(repeater)가 많이 필요하지 않고, 전기적 간섭에도 안정적이므로 통신 장애가 드물다. 단 한가지 단점이라면 비용적인 부분이다.   
-      - *Access network* : Network core로부터 네트워크 서비스를 받는 네트워크이다. (EX | BS, Access Point 등)   
+      - *Access network* : Network core로부터 네트워크 서비스를 받는 네트워크이다. (EX BS, Access Point 등)   
          - Cable-based access   
             - FDM (Frequency division multiplexing)   
                각 대역폭을 구분하여 전송하는 방법이다. 시간에 관계없이 대역폭을 각자 나누어 사용이 가능하다.   
@@ -80,7 +80,7 @@ mermaid: true
          - datacenter network   
             데이터센터에서 통신은 크게 Extra(외부와의 통신), Intra(내부와의 통신) 두 가지로 나뉜다.
          
-      - *Network core* : 각 edge 유저에게 제공하는 서비스가 아닌 통신에만 연결된 경우이다. 즉, 네트워크들의 네트워크이다. (EX | local ISP, global ISP와 같은 것이다.) 해당 네트워크의 주 기능은 Forwarding, Routing 두 가지 이다.   
+      - *Network core* : 각 edge 유저에게 제공하는 서비스가 아닌 통신에만 연결된 경우이다. 즉, 네트워크들의 네트워크이다. (EX local ISP, global ISP와 같은 것이다.) 해당 네트워크의 주 기능은 Forwarding, Routing 두 가지 이다.   
          - Forwarding : switching으로 부르기도하며, 로컬 영역에서 라우터로 들어온 입력 링크를 적절한 출력 링크로 변경해주는 과정이다.
          - Routing : 출발지에서 목적지까지의 경로를 결정하는 과정으로 적절히 전달하기 위해 라우팅 알고리즘을 통해 라우팅 테이블이 작성된다.
          - packet-switching (shared=공유된)   
