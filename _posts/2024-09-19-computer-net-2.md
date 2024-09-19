@@ -13,7 +13,7 @@ math: true
 모든 access net끼리 연결할 경우 O(N*N)의 연결이 생성되기 때문에 합리적이지않다. 따라서 Global ISP와 같이 Core-network를 두어 합리적으로 통신하기 위해 나타났다.   
 각 나라에도 여러 Core-network가 존재한다. 이들이 통신간에 모두 같은 프로토콜을 사용한다면, peering-link로도 연결이 가능하다. 그러나 대부분의 Core-network들은 각자 다른 프로토콜을 가지기 때문에 IXP(Internet exchange point EX. GW)를 통해 서로 통신해야한다.   
    - 일반적인 인터넷 구조   
-      ![Desktop View](_posts/img/internet-st.png)   
+      ![Desktop View](assets/img/internet-st.png)   
       Tier-1 ISP : 국내외 범위의 ISP (EX. SKT... 국제적으로는 Tier-2이다.)   
    - Content provider network : 분산된 네트워크를 통해 서로 통신하며 사용자에게 서비스를 제공하는 네트워크. 보통 tier-1 혹은 지역 ISP를 통해 제공한다. (EX. 네이버)   
 
