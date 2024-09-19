@@ -40,8 +40,28 @@ math: true
       송신자가 수신자에게 보낸 데이터의 양을 나타내는 지표이다.    
       측정 방법은 instantaneous(측정 당시의 비율), average(장시간 측정한 값의 평균) 두 가지 이다.   
       라우터 하나를 사이에 두고, 데이터를 받고있는 link의 처리율보다 데이터를 보내는 link의 처리율이 느릴 경우 데이터 손실이 나타날 수 있다.   
-      이러한 경우를 bottleneck link(다른 link들에 비해 상대적으로 작은 범위의 대역폭을 가지고 있어서 전송 속도에 영향을 주는 link)라고 한다.   
-
-
-      
-
+      이러한 경우를 bottleneck link(다른 link들에 비해 상대적으로 작은 범위의 대역폭을 가지고 있어서 전송 속도에 영향을 주는 link)라고 한다. 실제에서는 각 서버나 기기의 경우 core network에 비해 bottleneck인 경우가 많다.   
+         
+      Core network 같은 경우 link가 공유되는 상황이 많다. 이런 경우 공유되는 link의 처리율을 사용하는 통신의 수로 나누면 된다. (EX. 처리율 / 10)  
+- **Network Security**  
+   - packet sniffing  
+      packet sniffing은 공유된 Ethernet, wireless(wireless보다는 ethernet이 더 취약하다. wireless의 경우 해당 범위의 있는 모든 패킷을 다 확인해야하기 때문)에서 통신 시 제 3자가 모든 패킷을 읽고 저장하는 방법이다.  
+   - IP spoofing  
+      제 3자가 자신의 서버의 IP를 조작하여, 송신자의 데이터를 가져가거나, 다른 서버에 신뢰된 IP로 접속 및 데이터 전송을 할 수 있는 방법이다.  
+   - DoS (Denial of Service)  
+      공격자가 서버나 link의 대역폭과 같은 리소스들을 막대한 양의 트래픽 전송으로 사용이 불가능하게 만드는 방법이다.  
+   - Solutions  
+      - authentication : 사용자별 혹은 기기별 인증 절차를 통해 보안을 강화한다.  
+      - confidentiality : 송/수신자만의 알고리즘을 통해 데이터의 내용을 알 수 있도록 보안을 강화한다.  
+      - integrity checks : 각 사용자만 가지고 있는 고유의 코드를 통해 보안을 강화한다.(EX. 은행 OTP 카드)  
+      - access restrictions : 허가되지 않은 IP로는 접근을 제한한다.  
+      - firewall : 방화벽 설정을 통해 제한된 곳으로 부터 오는 요청을 거부하고, 한 번에 많은 양의 트래픽이나 주기적인 접근 요청에 대해 거부한다.  
+- **Network Layering**  
+   네트워크에서 계층화를 하는 이유 중 하나는 국제적인 표준을 만들기 위함이다.  
+   - 단순한 네트워크 계층 구조  
+      ![Layer](/assets/img/layer1.png){: width="500" height="500"}  
+      - application : 네트워크를 제공해주는 서비스 (EX. HTTP, DNS, SMTP)  
+      - transport : 프로세스간의 데이터 전송 주로 보안같은 신뢰성 관련 내용 (EX. TCP, UDP)  
+      - network : 라우팅을 올바르게 할 수 있도록 적어주는 주소 관련 내용 (EX. IP)  
+      - link : 
+      - physical : bit를 전송하는 물리적 연결  
