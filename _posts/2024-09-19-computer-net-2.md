@@ -59,7 +59,7 @@ math: true
 - **Network Layering**  
    네트워크에서 계층화를 하는 이유 중 하나는 국제적인 표준을 만들기 위함이다.  
    - 단순한 네트워크 계층 구조  
-      ![Layer](/assets/img/layer1.png){: width="300" height="300"}  
+      ![Layer](/assets/img/layer1.png){: width="100" height="100"}  
       - application : 네트워크를 제공해주는 서비스 (EX. HTTP, DNS, SMTP)  
       - transport : 프로세스간의 데이터 전송 주로 보안같은 신뢰성 관련 내용 (EX. TCP, UDP)  
       - network : 라우팅을 올바르게 할 수 있도록 적어주는 주소 관련 내용 (EX. IP)  
@@ -67,6 +67,6 @@ math: true
       - physical : bit를 전송하는 물리적 연결  
 
       - 네트워크의 캡슐화와 역캡슐화  
-         ![Layer](/assets/img/layer2.png){: width="800" height="800"}  
+         ![Layer](/assets/img/layer2.png){: width="1000" height="1000"}  
          스위치는 포워딩 기능만 존재하기 때문에 라우터처럼 적절한 경로를 탐색할 수 없다.  
          따라서 스위치에서는 캡슐안의 정보가 변화하지 않는다. 그러나 라우터의 경우 패킷안에 새로운 헤더 데이터가 캡슐화된다. 이는 다음 홉에 대한 주소를 넣어주기 위함이다.  
