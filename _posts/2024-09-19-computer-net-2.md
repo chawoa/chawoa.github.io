@@ -24,12 +24,12 @@ math: true
    - 라우터의 주요 2가지 기능 : 다음 적절한 홉으로의 경로 제공, 패킷을 받을 때 Queue로 버퍼를 만들어서 처리   
       이 전송 과정에서 적절한 목적지를 찾으면서 delay가 생기고 해당 delay를 Process delay라고 칭하기도 한다. 또한 link의 처리량이 패킷이 오는 속도 보다 느리게 되면 통신해야할 패킷은 Queue에 대기해야한다. 이 부분에서도 추가 지연이 발생 할 수 있다. 만약 전달 받고 있는 패킷이 Queue에 넘치게 되면 데이터 손실이 나타난다.   
    - delay의 4종류   
-      총 delay : d_{processing} + d_{queue} + d_{transmission} + d_{propagation}   
-      - d_{processing} : bit error 검사 시간, 어떤 경로로 보낼 것인지에 대한 시간   
-      - d_{queue} : 출력 link에서의 전송을 기다리는 시간, 라우터에 혼잡도에 대해 영향을 받음   
-      - d_{transmission} : 패킷의 길이 / link의 전송률 bps (link의 대역폭)   
+      \$$ 총 delay : d_{processing} + d_{queue} + d_{transmission} + d_{propagation} $$   
+      - \$$ d_{processing} : bit error 검사 시간, 어떤 경로로 보낼 것인지에 대한 시간 $$   
+      - \$$ d_{queue} : 출력 link에서의 전송을 기다리는 시간, 라우터에 혼잡도에 대해 영향을 받음 $$   
+      - \$$ d_{transmission} : 패킷의 길이 / link의 전송률 bps (link의 대역폭) $$   
          *패킷의 길이의 경우 사용하는 Application 따라 달라짐*   
-      - \$$ d_{propagation} : link의 물리적 길이 / 전파 속도 (케이블 fiber 사용 시 최대인 2x10^8m/sec) $$
+      -  d_{propagation} : link의 물리적 길이 / 전파 속도 (케이블 fiber 사용 시 최대인 $$ 2x10^8 $$ m/sec)   
       만약 라우터에 데이터가 도착하는 속도를 L (패킷의 평균 전송 속도 * 패킷의 길이)이라 하고, 데이터를 전송하는 속도를 R이라고 할때   
          L/R이 0에 가까울 경우 : 지연이 적음   
          L/R이 1에 가까울 경우 : 지연이 많음   
@@ -37,6 +37,11 @@ math: true
    - Caravan analogy   
    - Traceroute   
    - Throughput   
+      송신자가 수신자에게 보낸 데이터의 양을 나타내는 지표이다.    
+      측정 방법은 instantaneous(측정 당시의 비율), average(장시간 측정한 값의 평균) 두 가지 이다.   
+      라우터 하나를 사이에 두고, 데이터를 받고있는 link의 처리율보다 데이터를 보내는 link의 처리율이 느릴 경우 데이터 손실이 나타날 수 있다.   
+      이러한 경우를 bottleneck link(다른 link들에 비해 상대적으로 작은 범위의 대역폭을 가지고 있어서 전송 속도에 영향을 주는 link)라고 한다.   
+
 
       
 
