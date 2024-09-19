@@ -29,7 +29,7 @@ math: true
       - d_{queue} : 출력 link에서의 전송을 기다리는 시간, 라우터에 혼잡도에 대해 영향을 받음   
       - d_{transmission} : 패킷의 길이 / link의 전송률 bps (link의 대역폭)   
          *패킷의 길이의 경우 사용하는 Application 따라 달라짐*   
-      - d4(propagation) : link의 물리적 길이 / 전파 속도 (케이블 fiber 사용 시 최대인 \$$2x10^8$$m/sec)   
+      - \$$ d_{propagation} : link의 물리적 길이 / 전파 속도 (케이블 fiber 사용 시 최대인 2x10^8m/sec) $$
       만약 라우터에 데이터가 도착하는 속도를 L (패킷의 평균 전송 속도 * 패킷의 길이)이라 하고, 데이터를 전송하는 속도를 R이라고 할때   
          L/R이 0에 가까울 경우 : 지연이 적음   
          L/R이 1에 가까울 경우 : 지연이 많음   
@@ -37,6 +37,6 @@ math: true
    - Caravan analogy   
    - Traceroute   
    - Throughput   
-      
+
       
 
